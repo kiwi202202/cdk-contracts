@@ -13,7 +13,8 @@ module.exports = {
         'max-len': ['error', {
             code: 140, comments: 200, ignoreStrings: true, ignoreTemplateLiterals: true,
         }],
-        'no-unused-vars': [2, { varsIgnorePattern: 'export^' }],
+        // 'no-unused-vars': [2, { varsIgnorePattern: 'export^' }],
+        'no-unused-vars': 'off',
         'no-return-assign': [0],
         'no-underscore-dangle': [0],
         'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
@@ -25,6 +26,6 @@ module.exports = {
         'import/prefer-default-export': [0],
         'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
         'multiline-comment-style': 'error',
-        'import/no-extraneous-dependencies': 'off'
+        'import/no-extraneous-dependencies': 'off',
     },
 };

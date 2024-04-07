@@ -11,6 +11,7 @@ import "./interfaces/IPolygonZkEVMBridge.sol";
 import "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/IERC20MetadataUpgradeable.sol";
 import "./lib/EmergencyManager.sol";
 import "./lib/GlobalExitRootLib.sol";
+import "hardhat/console.sol";
 
 /**
  * PolygonZkEVMBridge that will be deployed on both networks Ethereum and Polygon zkEVM
@@ -147,6 +148,7 @@ contract PolygonZkEVMBridge is
         bool forceUpdateGlobalExitRoot,
         bytes calldata permitData
     ) public payable virtual ifNotEmergencyState nonReentrant {
+        // console.log("123");
         if (
             destinationNetwork == networkID ||
             destinationNetwork >= _CURRENT_SUPPORTED_NETWORKS
